@@ -1,0 +1,8 @@
+<h1>{{ request.user.username }}'s Wishlist</h1>
+<ul>
+    {% for product in wishlist.products.all %}
+    <li>{{ product.name }} - ${{ product.price }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'add_product' %}">Add Product</a>
+
