@@ -1,0 +1,63 @@
+digraph {
+	bgcolor=white rankdir=TB
+	clientes [label="clientes
+ID_cliente: INTEGER
+Nombre: VARCHAR(100)
+Apellido: VARCHAR(100)
+Direccion: TEXT
+Telefono: VARCHAR(20)
+Correo_electronico: VARCHAR(100)
+" shape=box]
+	detalle_venta [label="detalle_venta
+ID_detalle_venta: INTEGER
+ID_producto: INTEGER
+cantidad: INTEGER
+subtotal: DECIMAL(10, 2)
+total: DECIMAL(10, 2)
+" shape=box]
+	empleado [label="empleado
+id_empleado: INTEGER
+nombre: VARCHAR(100)
+telefono: VARCHAR(20)
+RFC: VARCHAR(20)
+rol: VARCHAR(50)
+contraseña: VARCHAR(100)
+" shape=box]
+	facturas [label="facturas
+ID_Factura: INTEGER
+Fecha_venta: DATE
+ID_detalle_venta: INTEGER
+Metodo_Pago: VARCHAR(50)
+ID_cliente: INTEGER
+ID_empleado: INTEGER
+ID_ruta: INTEGER
+" shape=box]
+	productos [label="productos
+ID_Producto: INTEGER
+Nombre: VARCHAR(100)
+Descripcion: TEXT
+Precio_unitario: DECIMAL(10, 2)
+precio_mayoreo: DECIMAL(10, 2)
+Stock: INTEGER
+proveedor: VARCHAR(100)
+" shape=box]
+	proveedor [label="proveedor
+id_proveedores: INTEGER
+nombre: VARCHAR(100)
+direccion: TEXT
+telefono: VARCHAR(20)
+email: VARCHAR(100)
+" shape=box]
+	ruta [label="ruta
+id_ruta: INTEGER
+empleado_chofer: VARCHAR(100)
+direcciones: TEXT
+empleado_salida: VARCHAR(100)
+" shape=box]
+	facturas -> clientes [label=ID_cliente]
+	facturas -> detalle_venta [label=ID_detalle_venta]
+	facturas -> empleado [label=ID_empleado]
+	facturas -> ruta [label=ID_ruta]
+	detalle_venta -> productos [label=ID_producto]
+	productos -> proveedor [label=proveedor]
+}

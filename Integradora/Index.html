@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Mia Nahomi Pichardo Saucedo</title>
+<style>
+body {
+    background-color: #F7CAC9; /* Color del fondo */
+    font-family: 'Lato', sans-serif; /* Fuente principal */
+    text-align: center; /* Alinear el texto al centro */
+}
+
+h1 {
+    color: #FFC107; /* Color del título */
+    font-size: 48px;
+    margin-top: 50px; /* Espacio entre el título y el fondo */
+}
+
+h2 {
+    color: #4CAF50; /* Color del subtítulo */
+    font-size: 24px;
+    margin-top: 20px; /* Espacio entre el subtítulo y el fondo */
+}
+
+span {
+    font-size: 18px;
+    color: #E91E63; /* Color del texto */
+    font-weight: bold; /* Hacer el texto más grueso */
+}
+
+svg {
+    width: 36px; /* Tamaño del corazón */
+    height: 36px;
+}
+
+.heart {
+    fill: #FFC107; /* Color del corazón */
+}
+</style>
+</head>
+<body>
+<h1><span class="heart">&#x2665;</span>Mia Nahomi Pichardo Saucedo<span class="heart">&#x2665;</span></h1>
+<h2><span>Una flor para Mia</span></h2>
+<p><span>🌺</span></p>
+<h2>
+No sé<br>
+No me atrevo a decir que me gustas, porque apenas te conozco, pero contigo tuve un buen presentimiento a pesar de que no sé nada de ti<br>
+No sé cuál es tu canción favorita, ni tu color favorito, ni que película te hace llorar.<br><br>
+No sé qué te hace reír, ni qué te hace enojar, no sé, no sé, no sé.<br>
+Por eso es que te escribo, porque sólo sé que te gusta el café y yo por ti madrugaría en domingo</h2>
+<p><a href="https://www.youtube.com/watch?v=6W4L2O-JQ-w" target="_blank" rel="noreferrer"><img src="https://www.youtube.com/yt/img/yts/img/ytenclave_2020a/ytenclave_2020a_256x256.png" width="32" height="32" alt="YouTube" style="vertical-align:middle"> Ver la canción de YouTube</a></p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.1.11/svg.min.js"></script>
+<script>
+  let heart = SVG('heart').svg();
+  heart.setAttribute('viewBox', '0 0 36 36');
+  heart.setAttribute('xml:space', 'preserve');
+  let path = heart.createElementNS('http://www.w3.org/2000/svg', 'path');
+  path.setAttribute('d', 'M 18 0 L 36 36 L 0 36 Z');
+  path.setAttribute('fill', '#FFC107');
+  heart.appendChild(path);
+</script>
+</body>
+</html>
